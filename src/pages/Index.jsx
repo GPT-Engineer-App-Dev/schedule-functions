@@ -1,17 +1,20 @@
-// Update this page (the content is just a fallback if you fail and example)
-// Use chakra-ui
-import { Container, Text, VStack } from "@chakra-ui/react";
-
-// Example of using react-icons
-// import { FaRocket } from "react-icons/fa";
-// <IconButton aria-label="Add" icon={<FaRocket />} size="lg" />; // IconButton would also have to be imported from chakra
+import { Container, Text, VStack, Heading, Box, Button, Flex } from "@chakra-ui/react";
+import { FaCalendarAlt, FaPlusCircle } from "react-icons/fa";
 
 const Index = () => {
   return (
     <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Text fontSize="2xl">Your Blank Canvas</Text>
-        <Text>Chat with the agent to start making edits.</Text>
+      <VStack spacing={6}>
+        <Heading as="h1" size="2xl" textAlign="center">Event Management Platform</Heading>
+        <Text fontSize="lg" textAlign="center">Manage your events efficiently and effortlessly.</Text>
+        <Flex direction="column" align="center" justify="center" mt={10}>
+          <Button leftIcon={<FaCalendarAlt />} colorScheme="teal" size="lg" mb={4}>
+            View Events
+          </Button>
+          <Button leftIcon={<FaPlusCircle />} colorScheme="blue" size="lg">
+            Create New Event
+          </Button>
+        </Flex>
       </VStack>
     </Container>
   );
