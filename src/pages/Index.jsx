@@ -1,5 +1,5 @@
 import { Container, Text, VStack, Heading, Box, Button, Flex } from "@chakra-ui/react";
-import { FaCalendarAlt, FaPlusCircle } from "react-icons/fa";
+import { FaCalendarAlt, FaPlusCircle, FaTicketAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const Index = () => {
@@ -16,6 +16,9 @@ const Index = () => {
           </Button>
           <Button leftIcon={<FaPlusCircle />} colorScheme="blue" size="lg" onClick={() => navigate('/create-event')}>
             Create New Event
+          </Button>
+          <Button leftIcon={<FaTicketAlt />} colorScheme="green" size="lg" onClick={() => navigate('/book-ticket')} mt={4}>
+            Book Tickets
           </Button>
         </Flex>
       </VStack>
